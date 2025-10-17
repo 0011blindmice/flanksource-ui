@@ -25,7 +25,11 @@ global:
   # @schema
   # -- node's labels for the pod to be scheduled on that node. See [Node Selector](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
   nodeSelector: {}
-
+  # @schema
+  # additionalProperties: true
+  # required: false
+  # @schema
+  podAnnotations: {}
   # @schema
   # required: false
   # type: array

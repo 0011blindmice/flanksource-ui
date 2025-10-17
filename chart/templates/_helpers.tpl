@@ -32,6 +32,12 @@ app.kubernetes.io/name: {{ include "chart.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
+{{- define "chart.extraLabels" -}}
+{{- if .Values.global.labels -}}
+{{.Values.global.labels | toYaml}}
+{{- end }}
+{{- end }}
+
 {{/*
 Create the name of the service account to use
 */}}

@@ -15,6 +15,7 @@ A Helm chart for flanksource-ui
 | global.imageRegistry | string | `"docker.io"` |  |
 | global.labels | object | `{}` |  |
 | global.nodeSelector | object | `{}` | node's labels for the pod to be scheduled on that node. See [Node Selector](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) |
+| global.podAnnotations | object | `{}` |  |
 | global.tolerations | list | `[]` |  |
 | image.name | string | `"{{.Values.global.imagePrefix}}/incident-manager-ui"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
@@ -24,6 +25,7 @@ A Helm chart for flanksource-ui
 | ingress.className | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.host | string | `"incident-commander-ui.local"` |  |
+| ingress.ingressClassName | string | `""` |  |
 | ingress.tls | list | `[]` |  |
 | nameOverride | string | `"flanksource-ui"` |  |
 | nodeSelector | object | `{}` | node's labels for the pod to be scheduled on that node. See [Node Selector](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) |
